@@ -1,0 +1,76 @@
+# 基金数据获取助手
+
+## 使用说明
+
+当需要获取基金数据时，可以参考以下搜索模板：
+
+### 中国公募基金
+
+搜索格式示例：
+- 基金基本信息: "{基金代码} 基金 持仓 费率 规模 2026"
+- 基金实时行情: "{基金代码} 最新价格 涨跌幅 今日 2026"
+- 基金经理信息: "{基金代码} 基金经理 业绩 2026"
+- 基金历史业绩: "{基金代码} 近期表现 基金净值 2026"
+
+常用中国基金数据网站：
+- 基金天天基金网: https://fund.eastmoney.com/{基金代码}.html
+- 同花顺基金: https://fund.10jqka.com.cn/
+- 雪球基金: https://xueqiu.com/
+
+### 美国ETF/共同基金
+
+搜索格式示例：
+- ETF基本信息: "{ETF代码} ETF profile holdings expense ratio 2026"
+- ETF实时行情: "{ETF代码} stock price chart 2026"
+- ETF历史数据: "{ETF代码} YTD performance 2026"
+- ETF持仓分析: "{ETF代码} top holdings sector allocation 2026"
+
+常用美国基金数据网站：
+- Yahoo Finance: https://finance.yahoo.com/quote/{ETF代码}/
+- ETF.com: https://www.etf.com/
+- Morningstar: https://www.morningstar.com/
+
+### 市场指数
+
+- 中国市场: "上证指数 深证成指 创业板指 沪深300 今日 2026"
+- 美国市场: "S&P 500 NASDAQ Dow Jones today 2026"
+- 其他市场: "恒生指数 日经225 欧洲股市 2026"
+
+### 宏观经济
+
+- "中国央行 货币政策 2026 最新"
+- "美联储 利率决策 2026 最新"
+- "全球通胀 2026 宏观经济"
+
+## WebFetch 使用建议
+
+对于已知的基金数据页面，使用 WebFetch 可以直接提取结构化信息：
+
+### 示例 URL
+
+中国基金：
+- https://fund.eastmoney.com/159915.html
+
+美国ETF：
+- https://finance.yahoo.com/quote/SPY
+- https://finance.yahoo.com/quote/QQQ
+
+提示词示例：
+- "获取这个基金的基本信息：当前价格、涨跌幅、费率、资产规模"
+- "列出这个基金的前十大持仓"
+- "获取这个基金近期的业绩表现数据"
+
+## 搜索策略
+
+1. 首先搜索基金代码+关键词获取基本信息
+2. 使用 WebFetch 访问具体数据页面获取详细数据
+3. 搜索基金+最新新闻了解近期动态
+4. 搜索相关市场指数了解市场环境
+5. 搜索行业关键词了解行业景气度
+
+## 注意事项
+
+- 所有价格数据请标注获取时间
+- 注意货币单位（人民币￥ vs 美元$）
+- 区分盘前价、开盘价、当前价、收盘价
+- 注意数据来源的可靠性
