@@ -1,0 +1,21 @@
+{
+  "name": "excalidraw-animated-video",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render ExcalidrawVideo out/video.mp4",
+    "build:webm": "remotion render ExcalidrawVideo out/video.webm --codec=vp9",
+    "preview": "remotion preview"
+  },
+  "dependencies": {
+    "@remotion/player": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0",
+    "roughjs": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
